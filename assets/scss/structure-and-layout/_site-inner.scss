@@ -1,0 +1,18 @@
+/* ## Site Inner
+--------------------------------------------- */
+
+.site-inner {
+	clear: both;
+	margin: 0 auto;
+}
+
+.content {
+
+	@include breakpoint(sm) {
+		width: 65%;
+	}
+
+	.full-width-content & {
+		width: 100%;
+	}
+}
