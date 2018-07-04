@@ -48,8 +48,8 @@
 
 .wrap,
 .content-sidebar-wrap {
-	width: 90%;
-	max-width: map_get($breakpoints, xl);
+	//width: 90%;
+	max-width: map_get($breakpoints, lg);
 	margin: 0 auto;
 
 	.wrap {

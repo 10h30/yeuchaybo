@@ -88,3 +88,10 @@
 	border: 0;
 	word-wrap: normal !important;
 }
+
+@mixin archive-veentry-title {
+	font-size: $h4--font-size;
+	@include breakpoint(md) {
+		font-size: $h3--font-size
+	}
+  }

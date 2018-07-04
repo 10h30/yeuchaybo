@@ -1,3 +1,86 @@
+/* Featured Images
+--------------------------------------------- */
+
+.yeuchaybo-featured-image {
+	margin: 0 0 24px;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+	&:before {
+		background: #f4f4f4;
+		content: "";
+		left: -30px;
+		height: calc(100% + 20px);
+		position: absolute;
+		top: 30px;
+		width: calc(100% + 60px);
+		z-index: -1;
+
+		.single & {
+			height: calc(100% + 45px);
+		}
+	}
+	img {
+		box-shadow: 0 16px 65px rgba(0,0,0,.18);
+		vertical-align: middle;
+		-webkit-transition: transform .5s cubic-bezier(.44,.51,.24,.99), box-shadow .75s cubic-bezier(.44,.51,.24,.99);
+		-moz-transition:    transform .5s cubic-bezier(.44,.51,.24,.99), box-shadow .75s cubic-bezier(.44,.51,.24,.99);
+		-ms-transition:     transform .5s cubic-bezier(.44,.51,.24,.99), box-shadow .75s cubic-bezier(.44,.51,.24,.99);
+		-o-transition:      transform .5s cubic-bezier(.44,.51,.24,.99), box-shadow .75s cubic-bezier(.44,.51,.24,.99);
+		transition:         transform .5s cubic-bezier(.44,.51,.24,.99), box-shadow .75s cubic-bezier(.44,.51,.24,.99);
+		transform: translate3d(0,0,0);
+	}
+	a:hover img {
+		box-shadow: 0 6px 15px rgba(0,0,0,.30);
+		transform: translate3d(0,10px,0);
+	}
+}
+
+
+
+.yeuchaybo-grid.archive:not(.woocommerce-page) .yeuchaybo-featured-image::before {
+	height: calc(100% + 10px);
+}
+
+.sidebar-content.single .yeuchaybo-featured-image::before {
+	left: auto;
+	right: 0;
+}
+
+.featuredpost .alignnone {
+	margin-bottom: 24px;
+}
+
+.yeuchaybo-featured-image.yeuchaybo-image-alignleft {
+	float: left;
+	margin: 0 24px 24px 0;
+}
+
+.yeuchaybo-featured-image.yeuchaybo-image-alignright {
+	float: right;
+	margin: 0 0 24px 24px;
+}
+
+.yeuchaybo-featured-image.yeuchaybo-image-alignleft img,
+.yeuchaybo-featured-image.yeuchaybo-image-alignright img {
+	margin: 0;
+}
+
+.has-featured-image .content {
+	margin-top: 24px;
+}
+
+.has-featured-image .content,
+.has-featured-image .sidebar,
+.has-post-thumbnail .entry-content,
+.has-post-thumbnail .entry-header {
+	position: relative;
+	z-index: 2;
+}
+
+
+
+
 /* ## Entry Content
 --------------------------------------------- */
 
@@ -10,6 +93,23 @@
 
 	.page &:last-of-type {
 		margin-bottom: 0;
+	}
+}
+
+.entry-header {
+	h1.entry-title {
+		letter-spacing: -2px;
+		@include breakpoint(sm) {
+			font-size: $entry-title--font-size * 1.5;
+		}
+	}
+	.single.full-width-content .content article >  & {
+	//.page.full-width-content & 
+		text-align: center;
+		margin-bottom: 30px;
+		@include breakpoint(sm) {
+			margin: 0 -70px 40px;
+		}
 	}
 }
 
@@ -80,4 +180,73 @@
 .content .sticky {
 	padding: 30px;
 	background-color: $sticky--background-color;
+}
+
+
+/* Grid Entries
+--------------------------------------------- */
+
+.yeuchaybo-grid-2.archive:not(.woocommerce-page),
+.yeuchaybo-grid-2.blog:not(.woocommerce-page) {
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		.entry {
+			flex: 1 1 100%;
+			margin-bottom: 80px;
+			@include breakpoint(sm) {
+				flex: 0 1 calc( (100% - 60px) / 2);
+				margin-left: 60px;
+			}
+			.entry-title {
+				font-size: 32px;
+			}
+		}
+
+		.entry:nth-of-type(2n+1) {
+			margin-left: 0;
+		}
+	}
+	.entry-header {
+		margin-bottom: 24px;
+	}
+	.entry-content p {
+		margin-bottom: 12px;
+	}
+	.pagination {
+		flex: 1 1 100%;
+	}			
+}
+
+.yeuchaybo-grid-3.archive:not(.woocommerce-page),
+.yeuchaybo-grid-3.blog:not(.woocommerce-page) {
+	.post-listing,
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		.entry {
+			flex: 1 1 100%;
+			margin-bottom: 80px;
+			@include breakpoint(sm) {
+				flex: 0 1 calc( (100% - 120px) / 3);
+				margin-left: 60px;
+			}
+			.entry-title {
+				@include archive-veentry-title;
+			}
+		}
+
+		.entry:nth-of-type(3n+1) {
+			margin-left: 0;
+		}
+	}
+	.entry-header {
+		margin-bottom: 24px;
+	}
+	.entry-content p {
+		margin-bottom: 12px;
+	}
+	.pagination {
+		flex: 1 1 100%;
+	}		
 }

@@ -3,7 +3,12 @@
 
 .site-inner {
 	clear: both;
+	max-width: map_get($breakpoints, lg);
 	margin: 0 auto;
+	padding: 5% 5% 0;
+	@include breakpoint(sm) {
+		padding: 0
+	}
 }
 
 .content {
@@ -12,7 +17,13 @@
 		width: 65%;
 	}
 
-	.full-width-content & {
+	.full-width-content &,
+	.yeuchaybo-grid-2 &,
+	.yeuchaybo-grid-3 & {
 		width: 100%;
+	}
+	.full-width-content.single & {
+		max-width: 760px;
+		margin: 0 auto;
 	}
 }

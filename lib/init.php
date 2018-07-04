@@ -19,10 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 
 }
-// Sets the content width based on the theme's design and stylesheet.
-if ( ! isset( $content_width ) ) {
-	$content_width = 1000; // Pixels.
-}
+
 add_action( 'genesis_setup', 'child_theme_init', 5 );
 /**
  * Initializes the child theme library.

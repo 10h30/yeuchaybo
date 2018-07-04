@@ -1,9 +1,9 @@
 .site-header {
-	position: absolute;
+	/*position: absolute;*/
 	z-index: 9999;
 	width: 100%;
 	background-color: $site-header--background-color;
-	box-shadow: $box-shadow;
+	/*box-shadow: $box-shadow;*/
 
 	.has-sticky-header & {
 		position: fixed;
@@ -15,6 +15,7 @@
 
 	> .wrap {
 		display: flex;
+		padding: 20px;
 		flex-wrap: wrap;
 		height: 100%;
 		justify-content: space-between;

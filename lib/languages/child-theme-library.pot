@@ -17,39 +17,39 @@ msgstr ""
 msgid "Hero Image"
 msgstr ""
 
-#: config/config.php:298
+#: config/config.php:300
 msgid "Blog"
 msgstr ""
 
-#: config/config.php:299, lib/views/page-contact.php:9
+#: config/config.php:301, lib/views/page-contact.php:9
 msgid "Contact Page"
 msgstr ""
 
-#: config/config.php:300, lib/views/page-boxed.php:9
+#: config/config.php:302, lib/views/page-boxed.php:9
 msgid "Boxed Template"
 msgstr ""
 
-#: config/config.php:301, lib/views/page-full.php:9
+#: config/config.php:303, lib/views/page-full.php:9
 msgid "Full Width"
 msgstr ""
 
-#: config/config.php:302, lib/views/page-landing.php:9
+#: config/config.php:304, lib/views/page-landing.php:9
 msgid "Landing Page"
 msgstr ""
 
-#: config/config.php:303, lib/views/page-sitemap.php:9
+#: config/config.php:305, lib/views/page-sitemap.php:9
 msgid "Sitemap"
 msgstr ""
 
-#: config/config.php:385, config/config.php:386
+#: config/config.php:387, config/config.php:388
 msgid "Menu"
 msgstr ""
 
-#: config/config.php:570
+#: config/config.php:572
 msgid "Header Menu"
 msgstr ""
 
-#: config/config.php:571
+#: config/config.php:573
 msgid "After Header Menu"
 msgstr ""
 
@@ -69,15 +69,15 @@ msgstr ""
 msgid " Color"
 msgstr ""
 
-#: lib/functions/hero.php:136
+#: lib/functions/hero.php:137
 msgid "Latest Posts"
 msgstr ""
 
-#: lib/functions/hero.php:145
+#: lib/functions/hero.php:146
 msgid "Not found, error 404"
 msgstr ""
 
-#: lib/functions/hero.php:154
+#: lib/functions/hero.php:155
 msgid "Search results for: "
 msgstr ""
 

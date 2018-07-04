@@ -3,10 +3,8 @@
 
 .entry-meta {
 
-	p {
-		margin-bottom: 0;
-		font-size: $entry-meta--font-size;
-	}
+	margin-bottom: 0;
+	font-size: $entry-meta--font-size;
 
 	.entry-header & {
 		margin-bottom: 20px;

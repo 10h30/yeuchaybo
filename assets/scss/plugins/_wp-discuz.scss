@@ -1,0 +1,27 @@
+/* ## WP-Discuz
+--------------------------------------------- */
+#wpcomm textarea,#wpcomm .wc-comment-header,#wpcomm .wc-comment-footer,#wpcomm .wc-comment .wc-comment-left{ 
+    font-family: $base-font;
+ }
+#wc-comment-header { font-size: 28px;}
+
+#wpcomm .wc-field-comment textarea {
+    padding: 10px;
+    height: 150px!important;
+    }
+
+#wpcomm .wc-field-name input[type="text"],
+#wpcomm .wc-field-email input[type="email"]{
+   padding: 10px;
+   height: auto;
+}
+#wpcomm .wc-comment-right .wc-comment-text, 
+#wpcomm .wc-comment-right .wc-comment-text *,
+#wpcomm .wc_comm_form.wc_main_comm_form .wc-field-textarea .wpdiscuz-textarea-wrap textarea  {
+    font-size: 1.8rem!important;
+}
+
+#wpcomm .wc-reply .wc-comment-right .wc-comment-text, 
+#wpcomm .wc-reply .wc-comment-right .wc-comment-text * {
+    font-size: 1.6rem;
+}

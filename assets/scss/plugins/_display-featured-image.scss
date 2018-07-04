@@ -1,0 +1,135 @@
+/* ## Display Featured Image for Genesis
+--------------------------------------------- */
+
+.has-leader {
+	.site-inner {
+		margin-top: 0;
+	}
+}
+.big-leader {
+	overflow: visible !important;
+	height: 600px;
+	position: relative;
+	margin-bottom: 60px;
+	max-height: 400px;
+	.wrap {
+		/*background: $overlay;*/
+		height: 100%;
+		padding: 30px;
+		display: flex;
+		justify-content: center;
+	}
+	.entry-title.featured-image-overlay {
+		color: #fff;
+		text-align: center;
+	}
+	.archive-title.featured-image-overlay {
+		color: #fff;
+		text-align: center;
+	}
+	.excerpt {
+		margin-bottom: 0;
+		padding: 0;
+		background: transparent;
+		text-align: center;
+		color: #FFF;
+		max-width: 760px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.archive-description {
+		.archive-title {
+			font-size: 30px;
+			font-weight: 700;
+			text-transform: uppercase;
+			@include breakpoint(sm) {
+				font-size: 60px;
+			}
+		}
+		margin-bottom: 0;
+		padding: 0;
+		background: transparent;
+		text-align: center;
+		color: #FFF;
+		max-width: 760px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	p {
+		margin-top: 18px;
+		margin-bottom: 0;
+	}
+}
+.backstretch.no-js {
+	background-size: cover;
+	height: 600px;
+}
+.home {
+	.big-leader {
+		p {
+			margin-top: 0;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+img.featured {
+	max-width: 100%;
+}
+@media only screen and (max-width: 768px) {
+	.big-leader {
+		height: 300px;
+	}
+	.backstretch.no-js {
+		height: 300px;
+	}
+}
+
+
+.big-leader {
+	
+	&:before {
+		background: #f4f4f4;
+		content: '';
+		left: -30px;
+		height: calc(100% + 20px);
+		position: absolute;
+		top: 30px;
+		width: calc(100% + 60px);
+		z-index: -999999;
+	}
+	
+	
+	
+	.entry-header {
+		margin: 0 auto;
+		max-width: 100%;
+		background: rgba(255,255,255,0.85);
+		margin-bottom: 30px;
+	}
+	.entry-title.featured-image-overlay {
+		background: transparent;
+		padding: 24px;
+		max-width: 1200px;
+		margin: 0 auto 0px;
+		text-align: center;
+		color: #5b5e5e;
+	}
+	.entry-meta {
+		text-align: center;
+		padding-bottom: 24px;
+		margin-top: 0;
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.big-leader {
+		height: 300px !important;
+	}
+}

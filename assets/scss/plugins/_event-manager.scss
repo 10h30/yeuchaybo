@@ -1,0 +1,115 @@
+/* ## Event Manager
+--------------------------------------------- */
+
+.single-event {
+    /*&.full-width-content .content {
+        max-width: 100%;
+    }*/
+    .event-info-wrapper {
+        margin: 0 auto 40px;
+        display: flex;
+        flex-wrap: wrap;
+        @include breakpoint(md){
+            box-shadow: $box-shadow;
+        }
+        .event-left {
+            box-shadow: $box-shadow;
+            flex: 1 1 100%;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            p {
+                margin-bottom: 15px;
+            }
+            @include breakpoint(md) {
+                box-shadow: none;
+                flex: 1 1 60%;
+                padding: 60px;
+                text-align: unset;
+                margin: 0 auto 0px;
+                max-width: 760px;
+            }
+            a ion-icon {
+                border-radius: 50%;
+                background: #8c8c8c;
+                font-size: 16px;
+                padding: 10px;
+                color: #FFF;
+                margin-right: 10px;
+                &:hover {
+                    background: red;
+                }
+            }
+         }
+         .event-right {
+            flex: 1 1 100%;
+            text-align: center;
+            @include breakpoint(md) {
+                flex: 1 1 30%;
+            }
+        }
+         .event-map {
+            flex: 1 1 100%;
+            margin-top: 30px;
+            max-height: 100%!important;
+            height: 300px;
+            @include breakpoint(md) {
+                flex: 1 1 40%;
+                margin-top: 0;
+                height: 100%;
+            }
+         }
+         .event-register {
+             text-align: center;
+             margin-top: 40px;
+             flex: 1 1 100%;
+         }
+    }
+    .event-meta {
+        margin-bottom: 20px;
+        > span {
+            padding: 0 10px;
+        }
+        .event-location:before {
+            font-family: ionicons;
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: inherit;
+            content: "\f455";
+            margin-right: 10px;
+        }
+        .event-start-date:before {
+            font-family: ionicons;
+            content: "\f3f3";
+            margin-right: 10px;
+        }
+    }
+    .event-hero {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: column;
+            min-height: 80vh;
+            text-align: center;
+            justify-content: center;
+            color: #FFF;
+            .entry-title {
+                font-size: 5.2rem;
+            }
+        }
+    }
+
+    .event-button {
+        a + a {
+            margin-left: 10px;
+        }
+        .button.register {
+            background: $cta;
+        }
+    }
+    
+}

@@ -197,7 +197,7 @@ return [
 		// 'breadcrumb_404'            => 0,
 		// 'breadcrumb_attachment'     => 0,
 		'content_archive'           => 'excerpt',
-		'content_archive_thumbnail' => 1,
+		'content_archive_thumbnail' => 5,
 		'image_size'                => 'large',
 		'image_alignment'           => 'alignnone',
 		// 'posts_nav'                 => 'numeric',
@@ -222,7 +222,7 @@ return [
 	|
 	*/
 	'google-fonts'        => [
-		'Source+Sans+Pro:400,600,700',
+		'Muli:400,400i,600,600i,700&amp;subset=vietnamese',
 	],
 
 	/*
@@ -242,8 +242,8 @@ return [
 			'crop'   => true,
 		],
 		'hero'     => [
-			'width'  => 1280,
-			'height' => 720,
+			'width'  => 1200,
+			'height' => 450,
 			'crop'   => true,
 		],
 	],
@@ -262,7 +262,9 @@ return [
 		'full-width-content',
 		'content-sidebar',
 		'sidebar-content',
-		'center-content',
+		//'center-content',
+		'yeuchaybo-grid-2',
+		'yeuchaybo-grid-3',
 		// 'content-sidebar-sidebar',
 		// 'sidebar-sidebar-content',
 		// 'sidebar-content-sidebar',
@@ -573,6 +575,7 @@ return [
 		'genesis-responsive-viewport',
 		'genesis-structural-wraps' => [
 			'header',
+			//'site-inner',
 			'menu-secondary',
 			'footer-widgets',
 			'footer',
@@ -628,11 +631,11 @@ return [
 		'before-header'  => 'genesis_before_header_wrap',
 		'before-footer'  => 'genesis_before_footer_wrap',
 		'footer-credits' => 'genesis_footer',
-		'front-page-1'   => 'front_page_widgets',
-		'front-page-2'   => 'front_page_widgets',
-		'front-page-3'   => 'front_page_widgets',
-		'front-page-4'   => 'front_page_widgets',
-		'front-page-5'   => 'front_page_widgets',
+		//'front-page-1'   => 'front_page_widgets',
+		//'front-page-2'   => 'front_page_widgets',
+		//'front-page-3'   => 'front_page_widgets',
+		//'front-page-4'   => 'front_page_widgets',
+		//'front-page-5'   => 'front_page_widgets',
 	],
 
 	/*

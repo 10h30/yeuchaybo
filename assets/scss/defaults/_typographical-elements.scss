@@ -19,7 +19,7 @@ body {
 	font-family: $body--font-family;
 	font-size: $body--font-size;
 	font-weight: $font-weight--regular;
-	line-height: $line-height--normal;
+	line-height: $line-height--large;
 
 	&.page-boxed {
 		max-width: map_get($breakpoints, md);
@@ -42,7 +42,7 @@ textarea:focus,
 
 a {
 	color: $link--font-color;
-	text-decoration: underline;
+	text-decoration: none;
 	transition: color $transition, background-color $transition;
 
 	&:focus,

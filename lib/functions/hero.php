@@ -33,34 +33,35 @@ function child_theme_hero_section_setup() {
 
 	}
 
-	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
-	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
-	remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
-	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_open', 5, 3 );
-	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_close', 15, 3 );
-	remove_action( 'genesis_before_loop', 'genesis_do_date_archive_title' );
-	remove_action( 'genesis_before_loop', 'genesis_do_blog_template_heading' );
-	remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
-	remove_action( 'genesis_before_loop', 'genesis_do_author_title_description', 15 );
-	remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description' );
-	remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+	//remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+	//remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+	//remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+	//remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
+	//remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_open', 5, 3 );
+	//remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_close', 15, 3 );
+	//remove_action( 'genesis_before_loop', 'genesis_do_date_archive_title' );
+	//remove_action( 'genesis_before_loop', 'genesis_do_blog_template_heading' );
+	//remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
+	//remove_action( 'genesis_before_loop', 'genesis_do_author_title_description', 15 );
+	//remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description' );
+	//remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
+	//remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	//remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
 	add_filter( 'woocommerce_show_page_title', '__return_null' );
 	add_filter( 'genesis_search_title_output', '__return_false' );
 
-	add_action( 'child_theme_hero_section', 'genesis_do_posts_page_heading' );
-	add_action( 'child_theme_hero_section', 'genesis_do_date_archive_title' );
-	add_action( 'child_theme_hero_section', 'genesis_do_taxonomy_title_description' );
-	add_action( 'child_theme_hero_section', 'genesis_do_author_title_description' );
-	add_action( 'child_theme_hero_section', 'genesis_do_cpt_archive_title_description' );
-	add_action( 'child_theme_hero_section', 'child_theme_hero_section_title', 10 );
-	add_action( 'child_theme_hero_section', 'child_theme_hero_section_excerpt', 20 );
-	add_action( 'be_title_toggle_remove', 'child_theme_hero_section_title_toggle' );
-	add_action( 'genesis_before_content', 'child_theme_hero_section_remove_404_title' );
-	add_action( 'genesis_before_content_sidebar_wrap', 'child_theme_hero_section_display' );
+	//add_action( 'child_theme_hero_section', 'genesis_do_posts_page_heading' );
+	//add_action( 'child_theme_hero_section', 'genesis_do_date_archive_title' );
+	//add_action( 'child_theme_hero_section', 'genesis_do_taxonomy_title_description' );
+	//add_action( 'child_theme_hero_section', 'genesis_do_author_title_description' );
+	//add_action( 'child_theme_hero_section', 'genesis_do_cpt_archive_title_description' );
+	//add_action( 'child_theme_hero_section', 'child_theme_hero_section_title', 10 );
+	//add_action( 'child_theme_hero_section', 'child_theme_hero_section_excerpt', 20 );
+	//add_action( 'be_title_toggle_remove', 'child_theme_hero_section_title_toggle' );
+	//add_action( 'genesis_before_content', 'child_theme_hero_section_remove_404_title' );
+	//add_action( 'genesis_before_content_sidebar_wrap', 'child_theme_hero_section_display' );
+	add_action( 'genesis_before_content_sidebar_wrap', 'authority_featured_image', 1 );
 
 }
 
@@ -206,11 +207,11 @@ function child_theme_hero_section_excerpt() {
 			printf( '<p itemprop="description">%s</p>', do_shortcode( get_the_excerpt( $id ) ) );
 
 		}
-	} elseif ( ( is_singular() ) && ! is_singular( 'product' ) && has_excerpt() ) {
+	} //elseif ( ( is_singular() ) && ! is_singular( 'product' ) && has_excerpt() ) {
 
-		printf( '<p itemprop="description">%s</p>', do_shortcode( get_the_excerpt() ) );
+		//printf( '<p itemprop="description">%s</p>', do_shortcode( get_the_excerpt() ) );
 
-	}
+	//}
 }
 
 /**
@@ -250,5 +251,34 @@ function child_theme_hero_section_display() {
 		'close'   => '</div></section>',
 		'context' => 'hero-section',
 	) );
+
+}
+
+
+/**
+ * Adds featured image above the entry content.
+ *
+ * @since 1.0.0
+ */
+function authority_featured_image() {
+
+	//$add_single_image = get_theme_mod( 'authority_single_image_setting', authority_customizer_get_default_image_setting() );
+
+	$image = genesis_get_image(
+		array(
+			'format'  => 'html',
+			'size'    => 'hero',
+			'context' => '',
+			'attr'    => array(
+				'alt'   => the_title_attribute( 'echo=0' ),
+				'class' => 'yeuchaybo-single-image',
+			),
+		)
+	);
+
+	if ( $image && is_singular( array ('post', 'event' ) ) ){
+		printf( '<div class="yeuchaybo-featured-image">%s</div>', $image );
+	}
+
 
 }
